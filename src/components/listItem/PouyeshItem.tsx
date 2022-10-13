@@ -26,11 +26,13 @@ const PouyeshContainer = styled.article`
   padding: 5px;
   border: 1px solid ${(props) => props.theme?.color.transWhite?.xSmall};
   border-radius: 2px;
+  margin-left: 8px;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     padding: unset;
     width: unset;
     flex-basis: unset;
     flex-shrink: unset;
+    margin-left: unset;
   }
 `;
 
@@ -42,8 +44,8 @@ const PouyeshImage = styled.img`
 
 const PouyeshType = styled.span`
   position: absolute;
-  top: 2px;
-  right: 6px;
+  top: 8px;
+  right: 8px;
   background-color: ${(props) => props.theme?.color.neutral?.base};
   color: ${(props) => props.theme?.color.neutral?.pureWhite};
   font-size: ${(props) => props.theme?.typography.footnote?.size};

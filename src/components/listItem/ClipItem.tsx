@@ -41,11 +41,13 @@ const ClipContainer = styled.article`
   padding: 5px;
   border: 1px solid ${(props) => props.theme?.color.transWhite?.xSmall};
   border-radius: 2px;
+  margin-left: 8px;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     padding: unset;
     width: unset;
     flex-basis: unset;
     flex-shrink: unset;
+    margin-left: unset;
   }
 `;
 

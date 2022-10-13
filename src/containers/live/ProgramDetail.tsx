@@ -1,18 +1,32 @@
 import type {FC} from 'react';
 import styled from 'styled-components';
+import FootnoteListItem from '@/components/listItem/FootnoteItem';
+import FootnoteList from '@/components/list/Footnoteist';
+import ChevronDown from '@/assets/svg/ChevronDown';
 
 const ProgramDetail: FC = () => {
   return (
     <ProgramDetailContainer>
-      <ProgramDetailTitleContainer>
-        <ProgramDetailSubtitle>خندوانه</ProgramDetailSubtitle>
-        <ProgramDetailCaption>صفحه تعامل</ProgramDetailCaption>
-      </ProgramDetailTitleContainer>
-      <ProgramDetailFootnoteList>
-        <ProgramDetailFootnoteListItem hasBackground>شبکه نسیم</ProgramDetailFootnoteListItem>
-        <ProgramDetailFootnoteListItem>۲۱۸ هزار بازدید</ProgramDetailFootnoteListItem>
-        <ProgramDetailFootnoteListItem>بازی و سرگرمی</ProgramDetailFootnoteListItem>
-      </ProgramDetailFootnoteList>
+      <details>
+        <ProgramDetailSummary>
+          <div>
+            <ProgramDetailTitleContainer>
+              <ProgramDetailSubtitle>خندوانه</ProgramDetailSubtitle>
+              <ProgramDetailCaption>صفحه تعامل</ProgramDetailCaption>
+            </ProgramDetailTitleContainer>
+            <FootnoteList>
+              <FootnoteListItem hasBackground>شبکه نسیم</FootnoteListItem>
+              <FootnoteListItem hasSeperator>۲۱۸ هزار بازدید</FootnoteListItem>
+              <FootnoteListItem hasSeperator>بازی و سرگرمی</FootnoteListItem>
+            </FootnoteList>
+          </div>
+          <ChevronDownAction className="arrow" />
+        </ProgramDetailSummary>
+        <ProgramCaption hiddenOnTablet>
+          در حال انجام بازی همزمان AR کهکشان، از خودتون و صفحه گوشی‌تون فیلم بگیرید و اینجا بارگذاری کنید. صاحبان بهترین
+          ویدئوها به استودیوی کهکشان دعوت میشن برای بازی و بازدید
+        </ProgramCaption>
+      </details>
       <ProgramCaption>
         در حال انجام بازی همزمان AR کهکشان، از خودتون و صفحه گوشی‌تون فیلم بگیرید و اینجا بارگذاری کنید. صاحبان بهترین
         ویدئوها به استودیوی کهکشان دعوت میشن برای بازی و بازدید
@@ -29,8 +43,22 @@ const ProgramDetailContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
+  cursor: pointer;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     flex-basis: 40%;
+    pointer-events: none;
+  }
+
+  & > details[open] > summary .arrow {
+    transform: rotate(180deg);
+  }
+
+  & > details summary .arrow {
+    transform: rotate(0deg);
+  }
+
+  & > details .arrow {
+    transition: all 0.3s;
   }
 `;
 
@@ -62,34 +90,31 @@ const ProgramDetailCaption = styled.span`
   }
 `;
 
-const ProgramDetailFootnoteList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-const ProgramDetailFootnoteListItem = styled.li<{hasBackground?: boolean}>`
-  background-color: ${(props) => (props?.hasBackground ? props.theme?.color.neutral?.base : 'unset')};
-  color: ${(props) => (props?.hasBackground ? props.theme?.color.neutral[200] : props.theme?.color.neutral[400])};
-  font-size: ${(props) => props.theme?.typography.footnote?.size};
-  line-height: ${(props) => props.theme?.typography.footnote?.lineHeight};
-  font-weight: ${(props) => props.theme?.typography.footnote?.weight};
-  padding: 0 4px;
-  border-radius: 2px;
-  &:not(:first-child):before {
-    content: '.';
-    padding: 0 0.5rem;
-  }
-`;
-
-const ProgramCaption = styled.p`
-  display: none;
+const ProgramCaption = styled.p<{hiddenOnTablet?: boolean}>`
+  display: ${(props) => (props.hiddenOnTablet ? 'block' : 'none')};
   color: ${(props) => props.theme?.color.neutral[200]};
   font-size: ${(props) => props.theme?.typography.caption?.size};
   line-height: ${(props) => props.theme?.typography.caption?.lineHeight};
   font-weight: ${(props) => props.theme?.typography.caption?.weight};
   padding-left: 0.5rem;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
-    display: block;
+    display: ${(props) => (props.hiddenOnTablet ? 'none' : 'block')};
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+`;
+
+const ProgramDetailSummary = styled.summary`
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+`;
+
+const ChevronDownAction = styled(ChevronDown)`
+  display: block;
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    display: none;
   }
 `;

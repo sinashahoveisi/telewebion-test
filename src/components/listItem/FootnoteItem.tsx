@@ -9,8 +9,9 @@ const FootnoteListItem = styled.li<{hasBackground?: boolean; hasSeperator?: bool
   padding: 0 4px;
   border-radius: 2px;
   &:not(:first-child):before {
-    content: ${(props) => (props?.hasSeperator ? '.' : 'unset')};
-    padding: 0 0.5rem;
+    content: '.';
+    display: ${(props) => (props?.hasSeperator ? 'inline-block' : 'none')};
+    margin-left: 5px;
   }
 `;
 
