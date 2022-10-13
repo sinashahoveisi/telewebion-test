@@ -43,6 +43,9 @@ export const color: ColorProps = {
   },
   brand: {
     brandColorRed: '#CC0000'
+  },
+  transWhite: {
+    xSmall: '#FFFFFF1A'
   }
 };
 

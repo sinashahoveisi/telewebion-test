@@ -9,6 +9,9 @@ export interface ColorProps {
   brand: {
     brandColorRed: string;
   };
+  transWhite: {
+    xSmall: string;
+  };
 }
 
 interface TypographyDetailProps {
