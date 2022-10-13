@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-family);
     background-color: var(--neutral-pureBlack);
   }
+  ul {
+    list-style: none;
+  }
 
   @mixin tablet($size: 768px) {
     @media screen and (max-width: $size) {

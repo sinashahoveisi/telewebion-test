@@ -15,6 +15,21 @@ export const typography: TypographyProps = {
     size: '16px',
     weight: 700,
     lineHeight: '24px'
+  },
+  subTitle: {
+    size: '18px',
+    weight: 500,
+    lineHeight: '24px'
+  },
+  caption: {
+    size: '12.64px',
+    weight: 500,
+    lineHeight: '20px'
+  },
+  footnote: {
+    size: '11.24px',
+    weight: 500,
+    lineHeight: '16px'
   }
 };
 

@@ -21,6 +21,9 @@ export interface TypographyProps {
   bodySmall: TypographyDetailProps;
   body: TypographyDetailProps;
   strongBody: TypographyDetailProps;
+  subTitle: TypographyDetailProps;
+  caption: TypographyDetailProps;
+  footnote: TypographyDetailProps;
 }
 
 export interface SizingProps {

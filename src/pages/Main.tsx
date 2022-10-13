@@ -38,7 +38,6 @@ const HeaderMenuContainer = styled.ul`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  list-style: none;
 `;
 
 const HeaderMenuItem = styled.li`
