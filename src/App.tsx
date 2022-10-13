@@ -27,8 +27,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6, figure {
     margin: 0;
+  }
+  
+  figure {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @mixin tablet($size: 768px) {

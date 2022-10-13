@@ -1,3 +1,7 @@
+import {PouyeshItemProps} from '@/types/pouyesh';
+import imagePouyesh from '@/assets/images/pouyesh/Image.png';
+import imageDefaultPouyesh from '@/assets/images/pouyesh/Default.png';
+
 export const episodes = [
   {
     season: 'فصل اول',
@@ -30,5 +34,28 @@ export const episodes = [
   {
     season: 'فصل اول',
     episode: 'قسمت ۳۰'
+  }
+];
+
+export const pouyeshsData: PouyeshItemProps[] = [
+  {
+    type: 'بازی تعاملی',
+    title: 'پویش من کتاب را دوست دارم',
+    image: imagePouyesh
+  },
+  {
+    type: 'بازی تعاملی',
+    title: 'پویش من کتاب را دوست دارم',
+    image: imageDefaultPouyesh
+  },
+  {
+    type: 'بازی تعاملی',
+    title: 'پویش من کتاب را دوست دارم',
+    image: imagePouyesh
+  },
+  {
+    type: 'بازی تعاملی',
+    title: 'پویش من کتاب را دوست دارم',
+    image: imageDefaultPouyesh
   }
 ];

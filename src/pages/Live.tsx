@@ -3,6 +3,7 @@ import khandevaneWall from '@/assets/images/khandevaneWall.png';
 import khandevaneLogo from '@/assets/images/khandevaneLogo.png';
 import ProgramDetail from '@/containers/live/ProgramDetail';
 import ProgramEpisode from '@/containers/live/ProgramEpisode';
+import PouyeshSection from '@/containers/live/PouyeshSection';
 
 const Live = () => {
   return (
@@ -15,6 +16,7 @@ const Live = () => {
         <ProgramDetail />
         <ProgramEpisode />
       </ProgramContainer>
+      <PouyeshSection />
     </Container>
   );
 };
