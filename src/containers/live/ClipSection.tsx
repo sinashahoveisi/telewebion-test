@@ -1,25 +1,33 @@
 import type {FC} from 'react';
 import styled from 'styled-components';
-import {pouyeshsData} from '@/assets/constants/data';
-import {PouyeshItemProps} from '@/types/pouyesh';
-import PouyeshItem from '@/components/listItem/PouyeshItem';
+import {ClipItemProps, ClipSectionProps} from '@/types/clip';
+import ClipItem from '@/components/listItem/ClipItem';
 
-const PouyeshSection: FC = () => {
+const ClipSection: FC<ClipSectionProps> = ({title, clips}) => {
   return (
-    <PouyeshContainer>
-      <PouyeshHeader>پویش های فعال</PouyeshHeader>
-      <PouyeshListContainer>
-        {pouyeshsData?.map((pouyesh: PouyeshItemProps, index: number) => (
-          <PouyeshItem key={index} image={pouyesh?.image} type={pouyesh?.type} title={pouyesh?.title} />
+    <ClipContainer>
+      <ClipHeader>{title}</ClipHeader>
+      <ClipListContainer>
+        {clips?.map((clip: ClipItemProps, index: number) => (
+          <ClipItem
+            key={index}
+            image={clip?.image}
+            type={clip?.type}
+            title={clip?.title}
+            program={clip.program}
+            date={clip.date}
+            viewCount={clip.viewCount}
+            time={clip?.time}
+          />
         ))}
-      </PouyeshListContainer>
-    </PouyeshContainer>
+      </ClipListContainer>
+    </ClipContainer>
   );
 };
 
-export default PouyeshSection;
+export default ClipSection;
 
-const PouyeshContainer = styled.section`
+const ClipContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -28,7 +36,7 @@ const PouyeshContainer = styled.section`
   margin-top: 50px;
 `;
 
-const PouyeshHeader = styled.h2`
+const ClipHeader = styled.h2`
   color: ${(props) => props.theme?.color.neutral[200]};
   font-size: ${(props) => props.theme?.typography.body?.size};
   line-height: ${(props) => props.theme?.typography.body?.lineHeight};
@@ -36,7 +44,7 @@ const PouyeshHeader = styled.h2`
   padding-left: 0.5rem;
 `;
 
-const PouyeshListContainer = styled.div`
+const ClipListContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -48,9 +56,9 @@ const PouyeshListContainer = styled.div`
     display: grid;
     grid-column-gap: 8px;
     grid-row-gap: 8px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   @media screen and (min-width: ${(props) => props.theme.screen.laptop}) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 `;

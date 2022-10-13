@@ -1,13 +1,13 @@
 import type {FC} from 'react';
 import styled from 'styled-components';
-import {episodes} from '@/assets/constants/data';
+import {episodesData} from '@/assets/constants/data';
 
 const ProgramEpisode: FC = () => {
   return (
     <ProgramEpisodeContainer>
       <ProgramEpisodeHeader>قسمت ها در فیلم و سریال</ProgramEpisodeHeader>
       <ProgramEpisodeList>
-        {episodes.map((episode, index: number) => (
+        {episodesData.map((episode, index: number) => (
           <ProgramEpisodeListItem key={index}>
             <ProgramEpisodeListItemSeason>{episode?.season}</ProgramEpisodeListItemSeason>
             <ProgramEpisodeListItemEpisode>{episode?.episode}</ProgramEpisodeListItemEpisode>

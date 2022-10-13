@@ -60,7 +60,7 @@ const PouyeshTitleContainer = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4px;
+  bottom: 0;
 `;
 
 const PouyeshTitle = styled.span`

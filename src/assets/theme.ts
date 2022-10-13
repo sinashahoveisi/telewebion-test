@@ -1,4 +1,4 @@
-import {ColorProps, TypographyProps, ThemeProps, SizingProps, ScreenProps} from 'types/theme';
+import {ColorProps, TypographyProps, ThemeProps, ScreenProps} from 'types/theme';
 
 export const typography: TypographyProps = {
   bodySmall: {
@@ -49,10 +49,6 @@ export const color: ColorProps = {
   }
 };
 
-export const sizing: SizingProps = {
-  hug: '48px'
-};
-
 export const screen: ScreenProps = {
   mobile: '480px',
   tablet: '768px',
@@ -62,7 +58,6 @@ export const screen: ScreenProps = {
 
 export const darkTheme: ThemeProps = {
   color,
-  sizing,
   screen,
   typography
 };

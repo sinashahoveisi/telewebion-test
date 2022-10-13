@@ -4,6 +4,8 @@ import khandevaneLogo from '@/assets/images/khandevaneLogo.png';
 import ProgramDetail from '@/containers/live/ProgramDetail';
 import ProgramEpisode from '@/containers/live/ProgramEpisode';
 import PouyeshSection from '@/containers/live/PouyeshSection';
+import ClipSection from '@/containers/live/ClipSection';
+import {clipsData, interspersedClipsData, submitedClipsData} from '@/assets/constants/data';
 
 const Live = () => {
   return (
@@ -17,6 +19,9 @@ const Live = () => {
         <ProgramEpisode />
       </ProgramContainer>
       <PouyeshSection />
+      <ClipSection title="کلیپ‌های برنامه‌سازان" clips={clipsData} />
+      <ClipSection title="کلیپ‌های تقطیع شده" clips={interspersedClipsData} />
+      <ClipSection title="کلیپ‌های ارسالی" clips={submitedClipsData} />
     </Container>
   );
 };

@@ -29,10 +29,6 @@ export interface TypographyProps {
   footnote: TypographyDetailProps;
 }
 
-export interface SizingProps {
-  hug: string;
-}
-
 export interface ScreenProps {
   mobile: string;
   tablet: string;
@@ -42,7 +38,6 @@ export interface ScreenProps {
 
 export interface ThemeProps {
   color: ColorProps;
-  sizing: SizingProps;
   screen: ScreenProps;
   typography: TypographyProps;
 }

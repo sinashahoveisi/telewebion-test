@@ -29,7 +29,7 @@ const Header = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: ${(props) => props.theme?.sizing.hug};
+  height: 50px;
   border-bottom: 1px solid ${(props) => props.theme?.color.neutral?.base};
 `;
 
