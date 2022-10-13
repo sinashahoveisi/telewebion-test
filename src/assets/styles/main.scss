@@ -1,0 +1,10 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixin';
+
+
+:root {
+  --direction: #{$direction};
+  --font-family: #{$fontFamily};
+  --neutral-pureBlack: #{$neutral-pureBlack};
+}
