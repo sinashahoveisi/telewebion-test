@@ -20,7 +20,7 @@ const ClipItem: FC<ClipItemProps> = ({title, type, time, program, date, viewCoun
       <ClipBody>
         <ClipTitle>{title}</ClipTitle>
         <FootnoteList margin="5px 0">
-          <FootnoteListItem hasBackground>{type}</FootnoteListItem>
+          {!!type && <FootnoteListItem hasBackground>{type}</FootnoteListItem>}
           <FootnoteListItem>{program}</FootnoteListItem>
         </FootnoteList>
         <FootnoteList>

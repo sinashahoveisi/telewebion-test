@@ -7,7 +7,7 @@ import SearchIcon from '@/assets/svg/SearchIcon';
 
 const Main: FC = () => {
   return (
-    <>
+    <Container>
       <Header>
         <Logo />
         <HeaderMenuContainer>
@@ -22,11 +22,16 @@ const Main: FC = () => {
         </ActionContainer>
       </Header>
       <Outlet />
-    </>
+    </Container>
   );
 };
 
 export default Main;
+
+const Container = styled.div`
+  max-width: 1500px;
+  margin: auto;
+`;
 
 const Header = styled.header`
   display: flex;

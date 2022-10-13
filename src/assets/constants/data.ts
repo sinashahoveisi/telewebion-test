@@ -76,7 +76,6 @@ export const clipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
-    type: 'ارسالی',
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: image1Clip,
     program: 'اخبار ورزشی',
@@ -103,7 +102,6 @@ export const clipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
-    type: 'ارسالی',
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: imageClip,
     program: 'اخبار ورزشی',
@@ -244,7 +242,41 @@ export const submitedClipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
+    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
+    image: image1Clip,
+    program: 'اخبار ورزشی',
+    date: '۳ روز پیش',
+    viewCount: '۲۱۸ هزار بازدید',
+    time: '۰۱:۵۴'
+  },
+  {
     type: 'ارسالی',
+    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
+    image: image2Clip,
+    program: 'اخبار ورزشی',
+    date: '۳ روز پیش',
+    viewCount: '۲۱۸ هزار بازدید',
+    time: '۰۱:۵۴'
+  },
+  {
+    type: 'ارسالی',
+    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
+    image: image3Clip,
+    program: 'اخبار ورزشی',
+    date: '۳ روز پیش',
+    viewCount: '۲۱۸ هزار بازدید',
+    time: '۰۱:۵۴'
+  },
+  {
+    type: 'ارسالی',
+    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
+    image: imageClip,
+    program: 'اخبار ورزشی',
+    date: '۳ روز پیش',
+    viewCount: '۲۱۸ هزار بازدید',
+    time: '۰۱:۵۴'
+  },
+  {
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: image1Clip,
     program: 'اخبار ورزشی',
@@ -307,7 +339,6 @@ export const submitedClipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
-    type: 'ارسالی',
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: imageClip,
     program: 'اخبار ورزشی',
@@ -325,7 +356,6 @@ export const submitedClipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
-    type: 'ارسالی',
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: image2Clip,
     program: 'اخبار ورزشی',
@@ -352,43 +382,6 @@ export const submitedClipsData: ClipItemProps[] = [
     time: '۰۱:۵۴'
   },
   {
-    type: 'ارسالی',
-    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
-    image: image1Clip,
-    program: 'اخبار ورزشی',
-    date: '۳ روز پیش',
-    viewCount: '۲۱۸ هزار بازدید',
-    time: '۰۱:۵۴'
-  },
-  {
-    type: 'ارسالی',
-    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
-    image: image2Clip,
-    program: 'اخبار ورزشی',
-    date: '۳ روز پیش',
-    viewCount: '۲۱۸ هزار بازدید',
-    time: '۰۱:۵۴'
-  },
-  {
-    type: 'ارسالی',
-    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
-    image: image3Clip,
-    program: 'اخبار ورزشی',
-    date: '۳ روز پیش',
-    viewCount: '۲۱۸ هزار بازدید',
-    time: '۰۱:۵۴'
-  },
-  {
-    type: 'ارسالی',
-    title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
-    image: imageClip,
-    program: 'اخبار ورزشی',
-    date: '۳ روز پیش',
-    viewCount: '۲۱۸ هزار بازدید',
-    time: '۰۱:۵۴'
-  },
-  {
-    type: 'ارسالی',
     title: 'افتتاحیه بازی های المپیک ۲۰۲۰ توکیو در ',
     image: image1Clip,
     program: 'اخبار ورزشی',
