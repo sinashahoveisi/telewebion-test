@@ -44,6 +44,9 @@ const PouyeshListContainer = styled.div`
   flex-wrap: nowrap;
   overflow-x: auto;
   width: 100%;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     display: grid;
     grid-column-gap: 8px;

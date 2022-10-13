@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
     direction: var(--direction);
     font-family: var(--font-family);
     background-color: var(--neutral-pureBlack);
+    margin: 0;
+    padding: 0;
   }
   ul {
     list-style: none;

@@ -39,6 +39,8 @@ const ClipContainer = styled.article`
   flex-basis: 250px;
   flex-shrink: 0;
   padding: 5px;
+  border: 1px solid ${(props) => props.theme?.color.transWhite?.xSmall};
+  border-radius: 2px;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     padding: unset;
     width: unset;

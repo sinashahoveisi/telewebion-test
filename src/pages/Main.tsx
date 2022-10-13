@@ -3,6 +3,7 @@ import type {FC} from 'react';
 import styled from 'styled-components';
 import UserIcon from '@/assets/svg/UserIcon';
 import Logo from '@/components/header/Logo';
+import SearchIcon from '@/assets/svg/SearchIcon';
 
 const Main: FC = () => {
   return (
@@ -15,7 +16,10 @@ const Main: FC = () => {
           <HeaderMenuItem>فیلم و سریال</HeaderMenuItem>
           <HeaderMenuImportantItem>پویش</HeaderMenuImportantItem>
         </HeaderMenuContainer>
-        <UserIcon />
+        <ActionContainer>
+          <SearchHeaderIcon />
+          <UserIcon />
+        </ActionContainer>
       </Header>
       <Outlet />
     </>
@@ -30,14 +34,18 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 50px;
+  padding: 0 8px;
   border-bottom: 1px solid ${(props) => props.theme?.color.neutral?.base};
 `;
 
 const HeaderMenuContainer = styled.ul`
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: ${(props) => props.theme.screen.mobile}) {
+    display: flex;
+  }
 `;
 
 const HeaderMenuItem = styled.li`
@@ -56,4 +64,19 @@ const HeaderMenuImportantItem = styled.li`
   font-weight: ${(props) => props.theme?.typography.strongBody?.weight};
   padding: 0 0.5rem;
   cursor: pointer;
+`;
+
+const ActionContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const SearchHeaderIcon = styled(SearchIcon)`
+  display: block;
+  @media screen and (min-width: ${(props) => props.theme.screen.mobile}) {
+    display: none;
+  }
 `;

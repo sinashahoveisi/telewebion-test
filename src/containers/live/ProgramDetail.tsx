@@ -25,10 +25,13 @@ export default ProgramDetail;
 
 const ProgramDetailContainer = styled.div`
   display: flex;
-  flex-basis: 40%;
+  flex-basis: calc(100% - 105px);
   flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    flex-basis: 40%;
+  }
 `;
 
 const ProgramDetailTitleContainer = styled.div`
@@ -51,6 +54,12 @@ const ProgramDetailCaption = styled.span`
   line-height: ${(props) => props.theme?.typography.caption?.lineHeight};
   font-weight: ${(props) => props.theme?.typography.caption?.weight};
   padding-left: 0.5rem;
+  &:after {
+    content: ')';
+  }
+  &:before {
+    content: '(';
+  }
 `;
 
 const ProgramDetailFootnoteList = styled.ul`
@@ -74,9 +83,13 @@ const ProgramDetailFootnoteListItem = styled.li<{hasBackground?: boolean}>`
 `;
 
 const ProgramCaption = styled.p`
+  display: none;
   color: ${(props) => props.theme?.color.neutral[200]};
   font-size: ${(props) => props.theme?.typography.caption?.size};
   line-height: ${(props) => props.theme?.typography.caption?.lineHeight};
   font-weight: ${(props) => props.theme?.typography.caption?.weight};
   padding-left: 0.5rem;
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    display: block;
+  }
 `;

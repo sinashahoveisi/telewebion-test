@@ -1,33 +1,52 @@
 import type {FC} from 'react';
 import styled from 'styled-components';
 import {episodesData} from '@/assets/constants/data';
+import LinkButton from '@/components/button/LinkButton';
+import ArrowUpLeftIcon from '@/assets/svg/ArrowUpLeftIcon';
 
 const ProgramEpisode: FC = () => {
   return (
-    <ProgramEpisodeContainer>
-      <ProgramEpisodeHeader>قسمت ها در فیلم و سریال</ProgramEpisodeHeader>
-      <ProgramEpisodeList>
-        {episodesData.map((episode, index: number) => (
-          <ProgramEpisodeListItem key={index}>
-            <ProgramEpisodeListItemSeason>{episode?.season}</ProgramEpisodeListItemSeason>
-            <ProgramEpisodeListItemEpisode>{episode?.episode}</ProgramEpisodeListItemEpisode>
-          </ProgramEpisodeListItem>
-        ))}
-      </ProgramEpisodeList>
-    </ProgramEpisodeContainer>
+    <>
+      <MobileLinkButton to="/live" text="قسمت ها در فیلم و سریال" icon={<ArrowUpLeftIcon />} />
+      <ProgramEpisodeContainer>
+        <ProgramEpisodeHeader>قسمت ها در فیلم و سریال</ProgramEpisodeHeader>
+        <ProgramEpisodeList>
+          {episodesData.map((episode, index: number) => (
+            <ProgramEpisodeListItem key={index}>
+              <ProgramEpisodeListItemSeason>{episode?.season}</ProgramEpisodeListItemSeason>
+              <ProgramEpisodeListItemEpisode>{episode?.episode}</ProgramEpisodeListItemEpisode>
+            </ProgramEpisodeListItem>
+          ))}
+        </ProgramEpisodeList>
+      </ProgramEpisodeContainer>
+    </>
   );
 };
 
 export default ProgramEpisode;
 
 const ProgramEpisodeContainer = styled.div`
-  display: flex;
+  display: none;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  width: 100%;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
   height: 100%;
-  flex: 1;
-  overflow: hidden;
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    display: flex;
+    flex: 1;
+    width: unset;
+    overflow: hidden;
+  }
+`;
+
+const MobileLinkButton = styled(LinkButton)`
+  display: flex;
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    display: none;
+  }
 `;
 
 const ProgramEpisodeHeader = styled.h2`
@@ -39,13 +58,19 @@ const ProgramEpisodeHeader = styled.h2`
 `;
 
 const ProgramEpisodeList = styled.ul`
-  display: flex;
+  display: none;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: center;
   width: 100%;
   gap: 8px;
-  overflow: scroll;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
+    display: flex;
+  }
 `;
 
 const ProgramEpisodeListItem = styled.li`

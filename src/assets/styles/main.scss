@@ -8,3 +8,17 @@
   --font-family: #{$fontFamily};
   --neutral-pureBlack: #{$neutral-pureBlack};
 }
+
+/* custom scrollBar */
+::-webkit-scrollbar {
+  width: 0.5em;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  opacity: 0.3;
+  border-radius: 10px;
+}
