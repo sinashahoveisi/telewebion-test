@@ -19,14 +19,16 @@ const ClipItem: FC<ClipItemProps> = ({title, type, time, program, date, viewCoun
       </ClipHeaderContainer>
       <ClipBody>
         <ClipTitle>{title}</ClipTitle>
-        <FootnoteList margin="5px 0">
-          {!!type && <FootnoteListItem hasBackground>{type}</FootnoteListItem>}
-          <FootnoteListItem>{program}</FootnoteListItem>
-        </FootnoteList>
-        <FootnoteList>
-          <FootnoteListItem hasSeperator>{date}</FootnoteListItem>
-          <FootnoteListItem hasSeperator>{viewCount}</FootnoteListItem>
-        </FootnoteList>
+        <CLipFooter>
+          <FootnoteList margin="5px 0">
+            {!!type && <FootnoteListItem hasBackground>{type}</FootnoteListItem>}
+            <FootnoteListItem>{program}</FootnoteListItem>
+          </FootnoteList>
+          <FootnoteList>
+            <FootnoteListItem hasSeperator>{date}</FootnoteListItem>
+            <FootnoteListItem hasSeperator>{viewCount}</FootnoteListItem>
+          </FootnoteList>
+        </CLipFooter>
       </ClipBody>
     </ClipContainer>
   );
@@ -35,7 +37,10 @@ const ClipItem: FC<ClipItemProps> = ({title, type, time, program, date, viewCoun
 export default ClipItem;
 
 const ClipContainer = styled.article`
+  display: flex;
+  flex-direction: column;
   width: 250px;
+  height: 100%;
   flex-basis: 250px;
   flex-shrink: 0;
   padding: 5px;
@@ -89,6 +94,8 @@ const ClipTimeText = styled.span`
 
 const ClipBody = styled.div`
   display: flex;
+  flex-grow: 1;
+  padding: 10px 5px;
   flex-direction: column;
   justify-content: center;
   align-items: start;
@@ -100,4 +107,12 @@ const ClipTitle = styled.span`
   line-height: ${(props) => props.theme?.typography.caption?.lineHeight};
   font-weight: ${(props) => props.theme?.typography.caption?.weight};
   text-align: right;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+`;
+
+const CLipFooter = styled.div`
+  margin-top: auto;
 `;

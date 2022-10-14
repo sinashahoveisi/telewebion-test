@@ -39,14 +39,15 @@ export default ProgramDetail;
 
 const ProgramDetailContainer = styled.div`
   display: flex;
-  flex-basis: calc(100% - 105px);
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 8px;
   cursor: pointer;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
-    flex-basis: 40%;
+    flex-basis: 0%;
     pointer-events: none;
+    padding: 0 24px;
   }
 
   & > details[open] > summary .arrow {

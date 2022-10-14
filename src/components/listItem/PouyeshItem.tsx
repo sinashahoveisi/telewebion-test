@@ -73,4 +73,8 @@ const PouyeshTitle = styled.span`
   line-height: ${(props) => props.theme?.typography.footnote?.lineHeight};
   font-weight: ${(props) => props.theme?.typography.footnote?.weight};
   text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 `;
