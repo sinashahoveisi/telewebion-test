@@ -44,6 +44,7 @@ const PouyeshListContainer = styled.div`
   flex-wrap: nowrap;
   overflow-x: auto;
   width: 100%;
+  scroll-snap-type: x mandatory;
   &::-webkit-scrollbar {
     display: none;
   }

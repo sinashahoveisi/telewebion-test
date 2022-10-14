@@ -51,6 +51,7 @@ const ClipListContainer = styled.div`
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
   width: 100%;
   &::-webkit-scrollbar {
     display: none;

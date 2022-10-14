@@ -27,6 +27,8 @@ const PouyeshContainer = styled.article`
   border: 1px solid ${(props) => props.theme?.color.transWhite?.xSmall};
   border-radius: 2px;
   margin-left: 8px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
   @media screen and (min-width: ${(props) => props.theme.screen.tablet}) {
     padding: unset;
     width: unset;
